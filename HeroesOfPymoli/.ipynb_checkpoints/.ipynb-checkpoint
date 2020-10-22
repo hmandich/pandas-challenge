@@ -10,7 +10,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": 34,
    "metadata": {},
    "outputs": [
     {
@@ -52,7 +52,7 @@
        "      <td>Male</td>\n",
        "      <td>108</td>\n",
        "      <td>Extraction, Quickblade Of Trembling Hands</td>\n",
-       "      <td>3.53</td>\n",
+       "      <td>$3.53</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>1</th>\n",
@@ -62,7 +62,7 @@
        "      <td>Male</td>\n",
        "      <td>143</td>\n",
        "      <td>Frenzied Scimitar</td>\n",
-       "      <td>1.56</td>\n",
+       "      <td>$1.56</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>2</th>\n",
@@ -72,7 +72,7 @@
        "      <td>Male</td>\n",
        "      <td>92</td>\n",
        "      <td>Final Critic</td>\n",
-       "      <td>4.88</td>\n",
+       "      <td>$4.88</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>3</th>\n",
@@ -82,7 +82,7 @@
        "      <td>Male</td>\n",
        "      <td>100</td>\n",
        "      <td>Blindscythe</td>\n",
-       "      <td>3.27</td>\n",
+       "      <td>$3.27</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>4</th>\n",
@@ -92,7 +92,7 @@
        "      <td>Male</td>\n",
        "      <td>131</td>\n",
        "      <td>Fury</td>\n",
-       "      <td>1.44</td>\n",
+       "      <td>$1.44</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
@@ -107,14 +107,14 @@
        "4            4      Iskosia90   23   Male      131   \n",
        "\n",
        "                                   Item Name  Price  \n",
-       "0  Extraction, Quickblade Of Trembling Hands   3.53  \n",
-       "1                          Frenzied Scimitar   1.56  \n",
-       "2                               Final Critic   4.88  \n",
-       "3                                Blindscythe   3.27  \n",
-       "4                                       Fury   1.44  "
+       "0  Extraction, Quickblade Of Trembling Hands  $3.53  \n",
+       "1                          Frenzied Scimitar  $1.56  \n",
+       "2                               Final Critic  $4.88  \n",
+       "3                                Blindscythe  $3.27  \n",
+       "4                                       Fury  $1.44  "
       ]
      },
-     "execution_count": 1,
+     "execution_count": 34,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -148,7 +148,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
+   "execution_count": 35,
    "metadata": {},
    "outputs": [
     {
@@ -189,7 +189,7 @@
        "0            576"
       ]
      },
-     "execution_count": 4,
+     "execution_count": 35,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -229,7 +229,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
+   "execution_count": 36,
    "metadata": {
     "scrolled": true
    },
@@ -278,7 +278,7 @@
        "0                     179          $3.05                  780       $2379.77"
       ]
      },
-     "execution_count": 5,
+     "execution_count": 36,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -330,7 +330,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
+   "execution_count": 37,
    "metadata": {},
    "outputs": [
     {
@@ -407,16 +407,84 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
+   "execution_count": 88,
    "metadata": {},
    "outputs": [
     {
      "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Purchase Count</th>\n",
+       "      <th>Average Purchase Price</th>\n",
+       "      <th>Total Purchase Value</th>\n",
+       "      <th>Avg Total Purchase per Person</th>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Gender</th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "      <th></th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>Female</th>\n",
+       "      <td>113</td>\n",
+       "      <td>$3.20</td>\n",
+       "      <td>$361.94</td>\n",
+       "      <td>$4.47</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Male</th>\n",
+       "      <td>652</td>\n",
+       "      <td>$3.02</td>\n",
+       "      <td>$1,967.64</td>\n",
+       "      <td>$4.07</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>Other / Non-Disclosed</th>\n",
+       "      <td>15</td>\n",
+       "      <td>$3.35</td>\n",
+       "      <td>$50.19</td>\n",
+       "      <td>$4.56</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
       "text/plain": [
-       "15"
+       "                       Purchase Count  Average Purchase Price  \\\n",
+       "Gender                                                          \n",
+       "Female                            113                   $3.20   \n",
+       "Male                              652                   $3.02   \n",
+       "Other / Non-Disclosed              15                   $3.35   \n",
+       "\n",
+       "                       Total Purchase Value  Avg Total Purchase per Person  \n",
+       "Gender                                                                      \n",
+       "Female                              $361.94                          $4.47  \n",
+       "Male                              $1,967.64                          $4.07  \n",
+       "Other / Non-Disclosed                $50.19                          $4.56  "
       ]
      },
-     "execution_count": 15,
+     "execution_count": 88,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -427,11 +495,43 @@
     "female_df = purchase_df.loc[purchase_df[\"Gender\"]==\"Female\"]\n",
     "other_ND_df = purchase_df.loc[purchase_df[\"Gender\"]==\"Other / Non-Disclosed\"]\n",
     "\n",
-    "#Column one - get purchase count using len\n",
+    "#column one - get purchase count using len of the different gender df\n",
     "male_p_count=len(male_df)\n",
     "female_p_count=len(female_df)\n",
     "other_ND_p_count=len(other_ND_df)\n",
-    "other_ND_p_count"
+    "\n",
+    "#column two - Average Purchase Price - sum price for each gender and devide by len of that same gender\n",
+    "male_avg_p_price = round((male_df[\"Price\"].sum())/len(male_df['Price']),2)\n",
+    "female_avg_p_price = (female_df[\"Price\"].sum())/len(female_df['Price'])\n",
+    "other_ND_avg_p_price = round((other_ND_df[\"Price\"].sum())/len(other_ND_df['Price']),2)\n",
+    "\n",
+    "#columns total purchase value\n",
+    "male_toal = male_df[\"Price\"].sum()\n",
+    "female_toal = female_df[\"Price\"].sum()\n",
+    "other_ND_toal = other_ND_df[\"Price\"].sum()\n",
+    "\n",
+    "#avg total purchase per person - since it is per person need use unique count of each gender from above\n",
+    "male_avg_per = round(male_toal/male_count,2)\n",
+    "female_avg_per = round(female_toal/female_count,2)\n",
+    "other_ND_avg_per = round(other_ND_toal/other_ND_count,2)\n",
+    "\n",
+    "#create dictionary to put into a df after\n",
+    "\n",
+    "purchasing_analysis_gender_dict = {'Gender' :['Female','Male','Other / Non-Disclosed'],\n",
+    "                                   'Purchase Count':[female_p_count,male_p_count,other_ND_p_count],\n",
+    "                                   'Average Purchase Price' :[female_avg_p_price, male_avg_p_price,other_ND_avg_p_price],\n",
+    "                                   'Total Purchase Value':[female_toal, male_toal,other_ND_toal],\n",
+    "                                   'Avg Total Purchase per Person':[female_avg_per,male_avg_per,other_ND_avg_per], \n",
+    "}\n",
+    "\n",
+    "#create data frame for gender demographics \n",
+    "purchasing_analysis_gender=pd.DataFrame(purchasing_analysis_gender_dict)\n",
+    "purchasing_analysis_gender=purchasing_analysis_gender.set_index(\"Gender\")\n",
+    "\n",
+    "#format floats as %\n",
+    "pd.options.display.float_format = '${:,.2f}'.format\n",
+    "\n",
+    "purchasing_analysis_gender"
    ]
   },
   {
@@ -465,9 +565,21 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
+   "execution_count": 54,
    "metadata": {},
    "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "C:\\Users\\Hilla\\anaconda3\\lib\\site-packages\\ipykernel_launcher.py:10: SettingWithCopyWarning: \n",
+      "A value is trying to be set on a copy of a slice from a DataFrame.\n",
+      "Try using .loc[row_indexer,col_indexer] = value instead\n",
+      "\n",
+      "See the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n",
+      "  # Remove the CWD from sys.path while we load stuff.\n"
+     ]
+    },
     {
      "data": {
       "text/html": [
@@ -539,23 +651,46 @@
        "</div>"
       ],
       "text/plain": [
-       "       Total Count Percentage of Players\n",
-       "<10             17                 2.95%\n",
-       "10-14           22                 3.82%\n",
-       "15-19          107                18.58%\n",
-       "20-24          258                44.79%\n",
-       "25-29           77                13.37%\n",
-       "30-34           52                 9.03%\n",
-       "35-39           31                 5.38%\n",
-       "40+             12                 2.08%"
+       "       Total Count  Percentage of Players\n",
+       "<10             17                  2.95%\n",
+       "10-14           22                  3.82%\n",
+       "15-19          107                 18.58%\n",
+       "20-24          258                 44.79%\n",
+       "25-29           77                 13.37%\n",
+       "30-34           52                  9.03%\n",
+       "35-39           31                  5.38%\n",
+       "40+             12                  2.08%"
       ]
      },
-     "execution_count": 6,
+     "execution_count": 54,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "source": []
+   "source": [
+    "#create age 9 bins to place values based on ages  \n",
+    "age_bins = [0, 9.90, 14.90, 19.90, 24.90, 29.90, 34.90, 39.90, 99999]\n",
+    "#create labels for the bins\n",
+    "labels = [\"<10\", \"10-14\", \"15-19\", \"20-24\", \"25-29\", \"30-34\", \"35-39\", \"40+\"]\n",
+    "\n",
+    "#slice the data and place the data series into a new column inside of the DataFrame\n",
+    "uniq_players['Age Range']= pd.cut(uniq_players['Age'],age_bins,labels=labels)\n",
+    "\n",
+    "#get count of each \n",
+    "age_count = uniq_players['Age Range'].value_counts()\n",
+    "age_percent=round(age_count/total_players*100,2)\n",
+    "\n",
+    "#create age demo data frame\n",
+    "age_demo_df=pd.DataFrame({'Total Count':age_count,\n",
+    "            'Percentage of Players':age_percent})\n",
+    "\n",
+    "#format floats as %\n",
+    "pd.options.display.float_format = '{}%'.format\n",
+    "\n",
+    "#sort\n",
+    "age_demo_df.sort_index()\n",
+    "\n"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -585,7 +720,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
+   "execution_count": 81,
    "metadata": {},
    "outputs": [
     {
@@ -614,13 +749,6 @@
        "      <th>Total Purchase Value</th>\n",
        "      <th>Avg Total Purchase per Person</th>\n",
        "    </tr>\n",
-       "    <tr>\n",
-       "      <th>Age Ranges</th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "      <th></th>\n",
-       "    </tr>\n",
        "  </thead>\n",
        "  <tbody>\n",
        "    <tr>\n",
@@ -648,27 +776,27 @@
        "      <th>20-24</th>\n",
        "      <td>365</td>\n",
        "      <td>$3.05</td>\n",
-       "      <td>$1,114.06</td>\n",
+       "      <td>$1114.06</td>\n",
        "      <td>$4.32</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>25-29</th>\n",
        "      <td>101</td>\n",
-       "      <td>$2.90</td>\n",
-       "      <td>$293.00</td>\n",
+       "      <td>$2.9</td>\n",
+       "      <td>$293.0</td>\n",
        "      <td>$3.81</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>30-34</th>\n",
        "      <td>73</td>\n",
        "      <td>$2.93</td>\n",
-       "      <td>$214.00</td>\n",
+       "      <td>$214.0</td>\n",
        "      <td>$4.12</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>35-39</th>\n",
        "      <td>41</td>\n",
-       "      <td>$3.60</td>\n",
+       "      <td>$3.6</td>\n",
        "      <td>$147.67</td>\n",
        "      <td>$4.76</td>\n",
        "    </tr>\n",
@@ -684,35 +812,60 @@
        "</div>"
       ],
       "text/plain": [
-       "           Purchase Count Average Purchase Price Total Purchase Value  \\\n",
-       "Age Ranges                                                              \n",
-       "<10                    23                  $3.35               $77.13   \n",
-       "10-14                  28                  $2.96               $82.78   \n",
-       "15-19                 136                  $3.04              $412.89   \n",
-       "20-24                 365                  $3.05            $1,114.06   \n",
-       "25-29                 101                  $2.90              $293.00   \n",
-       "30-34                  73                  $2.93              $214.00   \n",
-       "35-39                  41                  $3.60              $147.67   \n",
-       "40+                    13                  $2.94               $38.24   \n",
+       "       Purchase Count  Average Purchase Price  Total Purchase Value  \\\n",
+       "<10                23                   $3.35                $77.13   \n",
+       "10-14              28                   $2.96                $82.78   \n",
+       "15-19             136                   $3.04               $412.89   \n",
+       "20-24             365                   $3.05              $1114.06   \n",
+       "25-29             101                    $2.9                $293.0   \n",
+       "30-34              73                   $2.93                $214.0   \n",
+       "35-39              41                    $3.6               $147.67   \n",
+       "40+                13                   $2.94                $38.24   \n",
        "\n",
-       "           Avg Total Purchase per Person  \n",
-       "Age Ranges                                \n",
-       "<10                                $4.54  \n",
-       "10-14                              $3.76  \n",
-       "15-19                              $3.86  \n",
-       "20-24                              $4.32  \n",
-       "25-29                              $3.81  \n",
-       "30-34                              $4.12  \n",
-       "35-39                              $4.76  \n",
-       "40+                                $3.19  "
+       "       Avg Total Purchase per Person  \n",
+       "<10                            $4.54  \n",
+       "10-14                          $3.76  \n",
+       "15-19                          $3.86  \n",
+       "20-24                          $4.32  \n",
+       "25-29                          $3.81  \n",
+       "30-34                          $4.12  \n",
+       "35-39                          $4.76  \n",
+       "40+                            $3.19  "
       ]
      },
-     "execution_count": 7,
+     "execution_count": 81,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "source": []
+   "source": [
+    "#bins and label were already created but need slice the data and place into bins using all purchases\n",
+    "purchase_df['Age Range']= pd.cut(purchase_df['Age'],age_bins,labels=labels)\n",
+    "\n",
+    "#Purchase Count\n",
+    "purchase_count = purchase_df['Age Range'].value_counts()\n",
+    "\n",
+    "#Total Purchase Value\n",
+    "total_purchase = round(purchase_df.groupby(['Age Range'])[\"Price\"].sum(),2)\n",
+    "\n",
+    "#Average Purchase Price\n",
+    "avg_p_price = round(purchase_df.groupby(['Age Range'])[\"Price\"].mean(),2)\n",
+    "\n",
+    "#Avg Total Purchase per Person\n",
+    "avg_purchase_per = round(total_purchase/age_count,2)\n",
+    "\n",
+    "#create a dataframe to display the data\n",
+    "purchasing_analysis_age = pd.DataFrame({\n",
+    "                                        \"Purchase Count\":purchase_count,\n",
+    "                                         \"Average Purchase Price\":avg_p_price,\n",
+    "                                         \"Total Purchase Value\":total_purchase,\n",
+    "                                         \"Avg Total Purchase per Person\":avg_purchase_per\n",
+    "                                        })\n",
+    "#formatt data with $\n",
+    "pd.options.display.float_format = '${}'.format\n",
+    "\n",
+    "purchasing_analysis_age"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -743,7 +896,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
+   "execution_count": 87,
    "metadata": {},
    "outputs": [
     {
@@ -800,35 +953,53 @@
        "    <tr>\n",
        "      <th>Iral74</th>\n",
        "      <td>4</td>\n",
-       "      <td>$3.40</td>\n",
+       "      <td>$3.4</td>\n",
        "      <td>$13.62</td>\n",
        "    </tr>\n",
        "    <tr>\n",
        "      <th>Iskadarya95</th>\n",
        "      <td>3</td>\n",
        "      <td>$4.37</td>\n",
-       "      <td>$13.10</td>\n",
+       "      <td>$13.1</td>\n",
        "    </tr>\n",
        "  </tbody>\n",
        "</table>\n",
        "</div>"
       ],
       "text/plain": [
-       "             Purchase Count Average Purchase Price Total Purchase Value\n",
-       "SN                                                                     \n",
-       "Lisosia93                 5                  $3.79               $18.96\n",
-       "Idastidru52               4                  $3.86               $15.45\n",
-       "Chamjask73                3                  $4.61               $13.83\n",
-       "Iral74                    4                  $3.40               $13.62\n",
-       "Iskadarya95               3                  $4.37               $13.10"
+       "             Purchase Count  Average Purchase Price  Total Purchase Value\n",
+       "SN                                                                       \n",
+       "Lisosia93                 5                   $3.79                $18.96\n",
+       "Idastidru52               4                   $3.86                $15.45\n",
+       "Chamjask73                3                   $4.61                $13.83\n",
+       "Iral74                    4                    $3.4                $13.62\n",
+       "Iskadarya95               3                   $4.37                 $13.1"
       ]
      },
-     "execution_count": 8,
+     "execution_count": 87,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "source": []
+   "source": [
+    "#Purchase Count\n",
+    "player_pur_count =purchase_df.groupby(['SN']).count()['Price']\n",
+    "\n",
+    "#avg purchase price per user using group by unique players and mean\n",
+    "player_avg_purchase =round(purchase_df.groupby(['SN']).mean()['Price'],2)\n",
+    "\n",
+    "#calculate total purchases per player using grouby unique player id and sum \n",
+    "player_total_pur = round(purchase_df.groupby(['SN']).sum()['Price'],2)\n",
+    "\n",
+    "#create a dataframe to display the data\n",
+    "top_spenders_df = pd.DataFrame({\"Purchase Count\":player_pur_count,\n",
+    "                                \"Average Purchase Price\":player_avg_purchase,\n",
+    "                                \"Total Purchase Value\":player_total_pur})\n",
+    "#sort dataframe in descending order\n",
+    "top_spenders_df =top_spenders_df.sort_values(\"Total Purchase Value\",ascending=False)\n",
+    "#display preview of top spenders data frame\n",
+    "top_spenders_df.head()"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -862,7 +1033,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
+   "execution_count": 104,
    "metadata": {},
    "outputs": [
     {
@@ -940,37 +1111,58 @@
        "</div>"
       ],
       "text/plain": [
-       "                                                     Purchase Count  \\\n",
-       "Item ID Item Name                                                     \n",
-       "92      Final Critic                                             13   \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm             12   \n",
-       "145     Fiery Glass Crusader                                      9   \n",
-       "132     Persuasion                                                9   \n",
-       "108     Extraction, Quickblade Of Trembling Hands                 9   \n",
+       "                                                      Purchase Count  \\\n",
+       "Item ID Item Name                                                      \n",
+       "92      Final Critic                                              13   \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm              12   \n",
+       "145     Fiery Glass Crusader                                       9   \n",
+       "132     Persuasion                                                 9   \n",
+       "108     Extraction, Quickblade Of Trembling Hands                  9   \n",
        "\n",
-       "                                                     Item Price  \\\n",
-       "Item ID Item Name                                                 \n",
-       "92      Final Critic                                      $4.61   \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm      $4.23   \n",
-       "145     Fiery Glass Crusader                              $4.58   \n",
-       "132     Persuasion                                        $3.22   \n",
-       "108     Extraction, Quickblade Of Trembling Hands         $3.53   \n",
+       "                                                      Item Price  \\\n",
+       "Item ID Item Name                                                  \n",
+       "92      Final Critic                                       $4.61   \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm       $4.23   \n",
+       "145     Fiery Glass Crusader                               $4.58   \n",
+       "132     Persuasion                                         $3.22   \n",
+       "108     Extraction, Quickblade Of Trembling Hands          $3.53   \n",
        "\n",
-       "                                                     Total Purchase Value  \n",
-       "Item ID Item Name                                                          \n",
-       "92      Final Critic                                               $59.99  \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm               $50.76  \n",
-       "145     Fiery Glass Crusader                                       $41.22  \n",
-       "132     Persuasion                                                 $28.99  \n",
-       "108     Extraction, Quickblade Of Trembling Hands                  $31.77  "
+       "                                                      Total Purchase Value  \n",
+       "Item ID Item Name                                                           \n",
+       "92      Final Critic                                                $59.99  \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm                $50.76  \n",
+       "145     Fiery Glass Crusader                                        $41.22  \n",
+       "132     Persuasion                                                  $28.99  \n",
+       "108     Extraction, Quickblade Of Trembling Hands                   $31.77  "
       ]
      },
-     "execution_count": 9,
+     "execution_count": 104,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
-   "source": []
+   "source": [
+    "#retrieve the item info\n",
+    "item_info = purchase_df.loc[:,['Item ID','Item Name','Price']]\n",
+    "#Purchase Count using group by and count - grouping by both item id and name\n",
+    "item_purchase_count = item_info.groupby(['Item ID','Item Name']).count()[\"Price\"]\n",
+    "#Item Price using group by and mean - grouping by both item id and name\n",
+    "item_price = item_info.groupby(['Item ID','Item Name']).mean()[\"Price\"]\n",
+    "#Total Purchase Value using group by and sum - grouping by both item id and name\n",
+    "item_total = item_info.groupby(['Item ID','Item Name']).sum()[\"Price\"]\n",
+    "\n",
+    "#create a dataframe to display the data\n",
+    "popular_items_df = pd.DataFrame({\"Purchase Count\":item_purchase_count,\n",
+    "                               \"Item Price\":item_price,\n",
+    "                                \"Total Purchase Value\":item_total})\n",
+    "\n",
+    "#sort dataframe in descending order\n",
+    "popular_items_df = popular_items_df.sort_values(\"Purchase Count\",ascending=False)\n",
+    "\n",
+    "\n",
+    "#display preview of top spenders data frame\n",
+    "popular_items_df.head()"
+   ]
   },
   {
    "cell_type": "markdown",
@@ -995,7 +1187,7 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
+   "execution_count": 105,
    "metadata": {
     "scrolled": true
    },
@@ -1075,36 +1267,48 @@
        "</div>"
       ],
       "text/plain": [
-       "                                                     Purchase Count  \\\n",
-       "Item ID Item Name                                                     \n",
-       "92      Final Critic                                             13   \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm             12   \n",
-       "82      Nirvana                                                   9   \n",
-       "145     Fiery Glass Crusader                                      9   \n",
-       "103     Singed Scalpel                                            8   \n",
+       "                                                      Purchase Count  \\\n",
+       "Item ID Item Name                                                      \n",
+       "92      Final Critic                                              13   \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm              12   \n",
+       "82      Nirvana                                                    9   \n",
+       "145     Fiery Glass Crusader                                       9   \n",
+       "103     Singed Scalpel                                             8   \n",
        "\n",
-       "                                                     Item Price  \\\n",
-       "Item ID Item Name                                                 \n",
-       "92      Final Critic                                      $4.61   \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm      $4.23   \n",
-       "82      Nirvana                                           $4.90   \n",
-       "145     Fiery Glass Crusader                              $4.58   \n",
-       "103     Singed Scalpel                                    $4.35   \n",
+       "                                                      Item Price  \\\n",
+       "Item ID Item Name                                                  \n",
+       "92      Final Critic                                       $4.61   \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm       $4.23   \n",
+       "82      Nirvana                                            $4.90   \n",
+       "145     Fiery Glass Crusader                               $4.58   \n",
+       "103     Singed Scalpel                                     $4.35   \n",
        "\n",
-       "                                                     Total Purchase Value  \n",
-       "Item ID Item Name                                                          \n",
-       "92      Final Critic                                               $59.99  \n",
-       "178     Oathbreaker, Last Hope of the Breaking Storm               $50.76  \n",
-       "82      Nirvana                                                    $44.10  \n",
-       "145     Fiery Glass Crusader                                       $41.22  \n",
-       "103     Singed Scalpel                                             $34.80  "
+       "                                                      Total Purchase Value  \n",
+       "Item ID Item Name                                                           \n",
+       "92      Final Critic                                                $59.99  \n",
+       "178     Oathbreaker, Last Hope of the Breaking Storm                $50.76  \n",
+       "82      Nirvana                                                     $44.10  \n",
+       "145     Fiery Glass Crusader                                        $41.22  \n",
+       "103     Singed Scalpel                                              $34.80  "
       ]
      },
-     "execution_count": 10,
+     "execution_count": 105,
      "metadata": {},
      "output_type": "execute_result"
     }
    ],
+   "source": [
+    "#sort dataframe in descending order by total purchase\n",
+    "popular_items_df = popular_items_df.sort_values(\"Total Purchase Value\",ascending=False)\n",
+    "\n",
+    "popular_items_df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "metadata": {},
+   "outputs": [],
    "source": []
   }
  ],
